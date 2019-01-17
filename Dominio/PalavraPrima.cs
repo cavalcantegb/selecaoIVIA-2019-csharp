@@ -72,6 +72,8 @@
                     return 26;
                 case "A":
                     return 27;
+                case "B":
+                    return 28;
                 default:
                     return 0;
             }
