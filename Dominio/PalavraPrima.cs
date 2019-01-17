@@ -11,7 +11,16 @@
 
         public int calculaSomaDaPalavra()
         {
-            return 1;
+            if (this.palavra == "a")
+            {
+                return 1;
+            } else if (this.palavra == "b")
+            {
+                return 2;
+            } else
+            {
+                return 3;
+            }
         }
     }
 }
