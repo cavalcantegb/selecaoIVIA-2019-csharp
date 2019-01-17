@@ -31,5 +31,13 @@ namespace Dominio.Tests
             int resultado = palavraPrima.calculaSomaDaPalavra();
             Assert.AreEqual(3, resultado);
         }
+
+        [Test]
+        public void DeveRetornar4ParaDMinusculo()
+        {
+            var palavraPrima = new PalavraPrima("d");
+            int resultado = palavraPrima.calculaSomaDaPalavra();
+            Assert.AreEqual(4, resultado);
+        }
     }
 }

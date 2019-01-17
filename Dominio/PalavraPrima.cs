@@ -17,9 +17,12 @@
             } else if (this.palavra == "b")
             {
                 return 2;
-            } else
+            } else if (this.palavra == "c")
             {
                 return 3;
+            } else
+            {
+                return 4;
             }
         }
     }
