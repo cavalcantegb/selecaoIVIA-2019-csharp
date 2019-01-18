@@ -104,5 +104,13 @@ namespace Dominio.Tests
             bool numeroPrimo = palavraPrima.verificaNumeroPrimo();
             Assert.AreEqual(true, numeroPrimo);
         }
+
+        [Test]
+        public void DeveRetornarVerdadeiroParanNumeroPrimo2()
+        {
+            var palavraPrima = new PalavraPrima("b");
+            bool numeroPrimo = palavraPrima.verificaNumeroPrimo();
+            Assert.AreEqual(true, numeroPrimo);
+        }
     }
 }
