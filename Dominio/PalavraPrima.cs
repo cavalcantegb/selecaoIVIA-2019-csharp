@@ -144,10 +144,23 @@ namespace Dominio
         public bool verificaNumeroPrimo()
         {
             int numeroPalavra = calculaSomaDaPalavra();
+
+            //Definição de número primo: Número divisível apenas por um e por si mesmo
             if (numeroPalavra == 1 | numeroPalavra == 2 | numeroPalavra == 5 | numeroPalavra == 7)
             {
                 return true;
             }
+            int contadorPrimo = 0;
+            for(int indice = 1; indice<= numeroPalavra; indice++)
+            {
+                if (numeroPalavra % indice == 0)
+                {
+                    contadorPrimo++;
+                }
+            }
+
+            if (contadorPrimo == 2) return true;
+
             return false;
         }
     }
