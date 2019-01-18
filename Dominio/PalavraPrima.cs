@@ -143,11 +143,14 @@ namespace Dominio
 
         public bool verificaNumeroPrimo()
         {
-            int numeroPalavra = ParseLetraParaNumero(this.palavraAtributoClasse);
+            int numeroPalavra = calculaSomaDaPalavra();
             if (numeroPalavra == 1)
             {
                 return true;
             } else if (numeroPalavra == 2)
+            {
+                return true;
+            } else if (numeroPalavra == 5)
             {
                 return true;
             }

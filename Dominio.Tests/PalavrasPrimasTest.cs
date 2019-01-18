@@ -112,5 +112,13 @@ namespace Dominio.Tests
             bool numeroPrimo = palavraPrima.verificaNumeroPrimo();
             Assert.AreEqual(true, numeroPrimo);
         }
+
+        [Test]
+        public void DeveRetornarVerdadeiroParaNumeroPrimo5ComStringDeTamanhoMaiorQueUm()
+        {
+            var palavraPrima = new PalavraPrima("bc");
+            bool numeroPrimo = palavraPrima.verificaNumeroPrimo();
+            Assert.AreEqual(true, numeroPrimo);
+        }
     }
 }
