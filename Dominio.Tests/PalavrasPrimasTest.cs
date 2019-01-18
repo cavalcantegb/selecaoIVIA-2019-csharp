@@ -89,5 +89,12 @@ namespace Dominio.Tests
             Assert.AreEqual(6, resultado);
         }
 
+        [Test]
+        public void DeveRetornar10ParaABCD()
+        {
+            var palavraPrima = new PalavraPrima("abcd");
+            int resultado = palavraPrima.calculaSomaDaPalavra();
+            Assert.AreEqual(10, resultado);
+        }
     }
 }
