@@ -11,27 +11,14 @@
 
         public int calculaSomaDaPalavra()
         {
-            if (this.palavraAtributoClasse == "aa")
+            int tamanhoPalavra = this.palavraAtributoClasse.Length;
+            int result = 0;
+            var palavraCharArray = this.palavraAtributoClasse.ToCharArray();
+            for ( int i = 0; i< tamanhoPalavra; i++)
             {
-                var teste = this.palavraAtributoClasse.ToCharArray();
-                int resultado1 = ParseLetraParaNumero(teste[0].ToString());
-                int resultado2 = ParseLetraParaNumero(teste[1].ToString());
-                return resultado1 + resultado2;
-            } else if (this.palavraAtributoClasse == "abc") {
-                var teste = this.palavraAtributoClasse.ToCharArray();
-                int resultado1 = ParseLetraParaNumero(teste[0].ToString());
-                int resultado2 = ParseLetraParaNumero(teste[1].ToString());
-                int resultado3 = ParseLetraParaNumero(teste[2].ToString());
-                return resultado1 + resultado2 + resultado3;
-            } else if (this.palavraAtributoClasse == "abcd") {
-                var teste = this.palavraAtributoClasse.ToCharArray();
-                int resultado1 = ParseLetraParaNumero(teste[0].ToString());
-                int resultado2 = ParseLetraParaNumero(teste[1].ToString());
-                int resultado3 = ParseLetraParaNumero(teste[2].ToString());
-                int resultado4 = ParseLetraParaNumero(teste[3].ToString());
-                return resultado1 + resultado2 + resultado3 + resultado4;
-            } else
-                    return ParseLetraParaNumero(this.palavraAtributoClasse);
+                result = result + ParseLetraParaNumero(palavraCharArray[i].ToString());
+            }
+            return result;
         }
 
         public int ParseLetraParaNumero(string letra)
