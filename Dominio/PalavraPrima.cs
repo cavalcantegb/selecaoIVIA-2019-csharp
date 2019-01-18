@@ -17,7 +17,13 @@
                 int resultado1 = ParseLetraParaNumero(teste[0].ToString());
                 int resultado2 = ParseLetraParaNumero(teste[1].ToString());
                 return resultado1 + resultado2;
-            }else 
+            } else if (this.palavraAtributoClasse == "abc") {
+                var teste = this.palavraAtributoClasse.ToCharArray();
+                int resultado1 = ParseLetraParaNumero(teste[0].ToString());
+                int resultado2 = ParseLetraParaNumero(teste[1].ToString());
+                int resultado3 = ParseLetraParaNumero(teste[2].ToString());
+                return resultado1 + resultado2 + resultado3;
+            } else
                 return ParseLetraParaNumero(this.palavraAtributoClasse);
         }
 

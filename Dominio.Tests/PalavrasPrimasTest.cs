@@ -80,5 +80,14 @@ namespace Dominio.Tests
             int resultado = palavraPrima.calculaSomaDaPalavra();
             Assert.AreEqual(2, resultado);
         }
+
+        [Test]
+        public void DeveRetornar6ParaABC()
+        {
+            var palavraPrima = new PalavraPrima("abc");
+            int resultado = palavraPrima.calculaSomaDaPalavra();
+            Assert.AreEqual(6, resultado);
+        }
+
     }
 }
