@@ -144,13 +144,7 @@ namespace Dominio
         public bool verificaNumeroPrimo()
         {
             int numeroPalavra = calculaSomaDaPalavra();
-            if (numeroPalavra == 1)
-            {
-                return true;
-            } else if (numeroPalavra == 2)
-            {
-                return true;
-            } else if (numeroPalavra == 5)
+            if (numeroPalavra == 1 | numeroPalavra == 2 | numeroPalavra == 5 | numeroPalavra == 7)
             {
                 return true;
             }
