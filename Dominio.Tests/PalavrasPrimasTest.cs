@@ -19,7 +19,7 @@ namespace Dominio.Tests
         [Test]
         public void DeveRetornar2ParaBMinusculo()
         {
-            var palavraPrima = new PalavraPrima("b");
+            PalavraPrima palavraPrima = new PalavraPrima("b");
             int resultado = palavraPrima.calculaSomaDaPalavra();
             Assert.AreEqual(2, resultado);
         }
@@ -63,6 +63,22 @@ namespace Dominio.Tests
             var palavraPrima = new PalavraPrima("B");
             int resultado = palavraPrima.calculaSomaDaPalavra();
             Assert.AreEqual(28, resultado);
+        }
+
+        [Test]
+        public void DeveRetornar29ParaMaiusculos()
+        {
+            var palavraPrima = new PalavraPrima("C");
+            int resultado = palavraPrima.calculaSomaDaPalavra();
+            Assert.AreEqual(29, resultado);
+        }
+
+        [Test]
+        public void DeveRetornar2ParaAA()
+        {
+            var palavraPrima = new PalavraPrima("aa");
+            int resultado = palavraPrima.calculaSomaDaPalavra();
+            Assert.AreEqual(2, resultado);
         }
     }
 }

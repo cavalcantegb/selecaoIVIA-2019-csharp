@@ -2,19 +2,26 @@
 {
     public class PalavraPrima
     {
-        private string palavra;
+        private string palavraAtributoClasse;
 
-        public PalavraPrima(string palavra)
+        public PalavraPrima(string variavelParametroConstrutor)
         {
-            this.palavra = palavra;
+            this.palavraAtributoClasse = variavelParametroConstrutor;
         }
 
         public int calculaSomaDaPalavra()
         {
-            return ParseLetraParaNumero(this.palavra);
+            if (this.palavraAtributoClasse == "aa")
+            {
+                var teste = this.palavraAtributoClasse.ToCharArray();
+                int resultado1 = ParseLetraParaNumero(teste[0].ToString());
+                int resultado2 = ParseLetraParaNumero(teste[1].ToString());
+                return resultado1 + resultado2;
+            }else 
+                return ParseLetraParaNumero(this.palavraAtributoClasse);
         }
 
-        private int ParseLetraParaNumero(string letra)
+        public int ParseLetraParaNumero(string letra)
         {
             switch (letra)
             {
@@ -74,6 +81,54 @@
                     return 27;
                 case "B":
                     return 28;
+                case "C":
+                    return 29;
+                case "D":
+                    return 30;
+                case "E":
+                    return 31;
+                case "F":
+                    return 32;
+                case "G":
+                    return 33;
+                case "H":
+                    return 34;
+                case "I":
+                    return 35;
+                case "J":
+                    return 36;
+                case "K":
+                    return 37;
+                case "L":
+                    return 38;
+                case "M":
+                    return 39;
+                case "N":
+                    return 40;
+                case "O":
+                    return 41;
+                case "P":
+                    return 42;
+                case "Q":
+                    return 43;
+                case "R":
+                    return 44;
+                case "S":
+                    return 45;
+                case "T":
+                    return 46;
+                case "U":
+                    return 47;
+                case "V":
+                    return 48;
+                case "X":
+                    return 49;
+                case "W":
+                    return 50;
+                case "Y":
+                    return 51;
+                case "Z":
+                    return 52;
                 default:
                     return 0;
             }
