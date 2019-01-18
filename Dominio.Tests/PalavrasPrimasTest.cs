@@ -96,5 +96,13 @@ namespace Dominio.Tests
             int resultado = palavraPrima.calculaSomaDaPalavra();
             Assert.AreEqual(10, resultado);
         }
+
+        [Test]
+        public void DeveRetornarVerdadeiroParaNumeroPrimo1()
+        {
+            var palavraPrima = new PalavraPrima("a");
+            bool numeroPrimo = palavraPrima.verificaNumeroPrimo();
+            Assert.AreEqual(true, numeroPrimo);
+        }
     }
 }

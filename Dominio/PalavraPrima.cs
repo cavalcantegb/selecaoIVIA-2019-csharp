@@ -1,8 +1,15 @@
-﻿namespace Dominio
+﻿using System;
+
+namespace Dominio
 {
     public class PalavraPrima
     {
         private string palavraAtributoClasse;
+
+        public PalavraPrima()
+        {
+            this.palavraAtributoClasse = "";
+        }
 
         public PalavraPrima(string variavelParametroConstrutor)
         {
@@ -134,6 +141,12 @@
             }
         }
 
+        public bool verificaNumeroPrimo()
+        {
+            int numeroPalavra = ParseLetraParaNumero(this.palavraAtributoClasse);
+            if (numeroPalavra == 1) return true;
+            return false;
+        }
     }
 
 }
